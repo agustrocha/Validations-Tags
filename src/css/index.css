@@ -5,14 +5,19 @@
   * Using this particular setup will help achieve mobile-first approach
 **/
 
+
 @import "~normalize.css";
+
+:root {
+    --border-radius: 3px;
+}
 
 html, body {
     height: 100%;
 }
 
 body {
-    background-color: #F3D24F;
+    background-color: #0A1831;
     font-family: "Arial", "sans-serif";
     display: flex;
     flex-direction: column;
@@ -29,6 +34,131 @@ body {
     text-align: center;
     font-size: 2em;
     color: #302a0f;
+}
+
+
+.addedTags-container {
+    display: flex;
+}
+
+.tag-textbox {
+    background-color: rgba(217, 217,217, .15);
+    border-color: rgba(217, 217,217, .15);
+    border-radius: var(--border-radius);
+    width: 100%;
+    padding: .25rem;
+    color: #fff;
+    margin-right: .5rem;
+}
+
+.filteredTags-container {
+    border-radius: var(--border-radius);
+    position: absolute;
+    width: 100%;
+    max-width: 10rem;
+    background-color: #ffffff;
+    top: 0;
+    z-index: 9;
+    margin-top: 5rem;
+}
+
+.filteredTags-container:first-child {
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+}
+
+.tagContainer {
+    padding: 1rem;
+}
+
+.tagContainer:last-of-type {
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+}
+
+.tagContainer:hover {
+    background-color: lightgrey;
+    cursor: pointer;
+}
+
+.tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EBEBEF;
+    font-size: 12px;
+    border-radius: var(--border-radius);
+    margin-right: .5rem;
+    margin-bottom: .5rem;
+    text-align: center;
+    height: 1.5rem;
+}
+
+.tag p {
+    margin: 0 0.5rem;
+}
+
+.tag_close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f01f1f;
+    height: 100%;
+    padding: 0 .75rem;
+    background-color: lightpink;
+    border-bottom-right-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.panel {
+    margin: 2rem 0;
+    background: #ffffff;
+    padding: 2rem 2rem 0 2rem;
+}
+
+.form_box {
+    flex-flow: column wrap;
+    margin-bottom: .9rem;
+    display: flex;
+    position: relative;
+}
+
+.form_box input {
+    border: none;
+    background-color: #EBEBEF;
+    padding: .9rem;
+    border-radius: var(--border-radius);
+    flex-grow: 1;
+    font-size: .9rem;
+    margin-bottom: .9rem;
+    width: -moz-available;
+}
+
+.required {
+    color: #F84949;
+}
+
+.error_message {
+    margin: 0;
+    font-size: 12px;
+    color: #F84949;
+}
+
+button {
+    max-width: 12.5rem;
+    width: 100%;
+    padding: .9rem;
+    border-radius: var(--border-radius);
+    transition: background-color 300ms ease-in-out;
+    background-color: #46FA1B;
+    color: #0D4400;
+    border: none;
+    cursor: pointer;
 }
 
 /** AUTHOR'S OWN CSS STYLES BELOW**/

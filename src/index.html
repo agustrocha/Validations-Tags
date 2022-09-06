@@ -10,12 +10,67 @@
 </head>
 
 <body>
-    <!--[if IE]>
-    <p class="upgradeInfo">Please upgrade to a newer version of this browser..</p>
-    <![endif]-->
+<!--[if IE]>
+<p class="upgradeInfo">Please upgrade to a newer version of this browser..</p>
+<![endif]-->
 
-    <!-- Add site content here -->
-    <p class="welcomeText">Let's build something great!</p>
+<!-- Add site content here -->
+<!--<div class="input-container">-->
+<!--    <div class="tags-container">-->
+<!--        <input class="tag-textbox" type="text" placeholder="Enter tags!">-->
+<!--        <div class="addedTags-container hidden"></div>-->
+<!--    </div>-->
+<!--    <div class="filteredTags-container hidden"></div>-->
+<!--</div>-->
+
+<div class="panel">
+    <div class="form_box">
+        <label>Collection Name <span class="required">*</span></label>
+        <input id="collection_name" type="text" placeholder="Collection name">
+        <p class="error_message hidden">* Collection name is required.</p>
+    </div>
+    <div class="form_box">
+        <label>Contact Email <span class="required">*</span></label>
+        <input id="contact_email" type="text" placeholder="Contact email">
+        <p class="error_message hidden">* Contact email is required.</p>
+    </div>
+    <div class="form_box">
+        <label>Description <span class="required">*</span></label>
+        <input id="description" type="text" placeholder="Description">
+        <p class="error_message hidden">* Description is required.</p>
+    </div>
+    <div class="form_box">
+        <label>Supply <span class="required">*</span></label>
+        <input id="supply" type="number" min="0" placeholder="Supply size">
+        <p class="error_message hidden">* Supply with a min of 0 is required.</p>
+    </div>
+    <div class="form_box">
+        <label>Mint Date(UTC) <span class="required">*</span></label>
+        <input id="mint_date" type="datetime-local">
+        <p class="error_message hidden">* Mint date is required and can't be less than today.</p>
+    </div>
+    <div class="form_box">
+        <label>Mint Price <span class="required">*</span></label>
+        <input id="mint_price" type="number" placeholder="Mint price">
+        <p class="error_message hidden">* Mint price with a min of 0 is required.</p>
+    </div>
+    <div class="form_box">
+        <label>Tags <span class="required">*</span></label>
+        <div class="tags-container">
+            <input class="tags" type="text" placeholder="Enter tags!">
+            <div class="addedTags-container hidden"></div>
+            <p id="tags_error" class="error_message hidden">* At least one tag is required.</p>
+        </div>
+        <div class="filteredTags-container hidden"></div>
+    </div>
+    <div class="form_box">
+        <label>Featured Image(jpg, png or gif) <span class="required">*</span></label>
+        <input id="featured_image" type="file" placeholder="Collection Name">
+        <p class="error_message hidden">* A featured image is required.</p>
+    </div>
+</div>
+<button>Send!</button>
+
 </body>
 
 </html>
